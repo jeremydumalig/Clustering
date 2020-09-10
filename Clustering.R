@@ -5,7 +5,7 @@ library(dendextend)
 library(ggplot2)
 rm(list=ls())
 
-nba19 <- read_csv(file='https://raw.githubusercontent.com/jeremydumalig/Clustering/master/nba_2019')
+nba19 <- read_csv(file='https://raw.githubusercontent.com/jeremydumalig/Clustering/master/nba_2019.csv')
 nba19 <- 
   nba19 %>%
   na.omit() %>%
