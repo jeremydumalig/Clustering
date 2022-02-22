@@ -30,4 +30,23 @@ plot(hc1, cex=0.6, hang=-1)
 clust <- cutree(hc1, k=10)
 nba19$Hierarchical <- clust
 
-fviz_cluster(list(data = select(nba19, -Player), cluster = clust))
+theme_borders <- 
+  theme_linedraw() +
+  theme(
+    plot.margin = margin(1, 0.5, 0.5, 0.5, "cm"),
+    plot.background = element_rect(
+      fill = "grey90",
+      color = "black"
+    ),
+    legend.box.background = element_rect(size=0.75),
+    title = element_text(size=20),
+    legend.title = element_text(size=10),
+    axis.title.x = element_text(size=15),
+    axis.title.y = element_text(size=15)
+  )
+
+fviz_cluster(list(data = select(nba19, -Player), cluster = clust), labelsize=0) + 
+  theme_borders +
+  theme(legend.position = "none") +
+  ggtitle("Hierarchical Clustering Results") +
+  xlab("") + ylab("")
