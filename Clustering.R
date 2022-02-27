@@ -11,6 +11,7 @@ nba19 <-
   na.omit() %>%
   select(Player, `FG%`, FGA, `3P%`, `3PA`, `FT%`, ORB, DRB, AST, STL, BLK, TOV, PTS)
 
+#data normalization
 nba19$FGA <- (nba19$FGA - min(nba19$FGA))/(max(nba19$FGA)-min(nba19$FGA))
 nba19$`3PA` <- (nba19$`3PA` - min(nba19$`3PA`))/(max(nba19$`3PA`)-min(nba19$`3PA`))
 nba19$ORB <- (nba19$ORB - min(nba19$ORB))/(max(nba19$ORB)-min(nba19$ORB))
@@ -23,6 +24,7 @@ nba19$PTS <- (nba19$PTS - min(nba19$PTS))/(max(nba19$PTS)-min(nba19$PTS))
 
 rownames(nba19) <- nba19$Player
 
+#hierarchical clustering model
 d <- dist(select(nba19, -Player), method='euclidean')
 hc1 <- hclust(d, method='complete')
 plot(hc1, cex=0.6, hang=-1)
@@ -30,6 +32,7 @@ plot(hc1, cex=0.6, hang=-1)
 clust <- cutree(hc1, k=10)
 nba19$Hierarchical <- clust
 
+#ggplot theme
 theme_borders <- 
   theme_linedraw() +
   theme(
@@ -45,6 +48,7 @@ theme_borders <-
     axis.title.y = element_text(size=15)
   )
 
+#cluster visualization
 fviz_cluster(list(data = select(nba19, -Player), cluster = clust), labelsize=0) + 
   theme_borders +
   theme(legend.position = "none") +
