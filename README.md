@@ -12,4 +12,4 @@ hierarchical.csv
 * Standardized traditional box score statistics from the 2018-19 NBA season, with hierarchical clustering classifications
 
 nba_2019.csv
-* Traditional box score statistics from the 2018-19 NBA season
+* Traditional box score per-game statistics from the 2018-19 NBA season
