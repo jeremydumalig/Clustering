@@ -1,6 +1,6 @@
 # Clustering
 
-*This project was completed as a part of the Advanced Machine Learning elective at the Nueva School (2019). NBA players are classified not by the five traditional positions but by a variety of clustering models. The full project can be found [here](https://jeremydumalig.com/utilizing-ml-clustering-algorithms-to-classify-nba-player-positions/).*
+*This project was completed as a part of the Advanced Machine Learning elective at the Nueva School (2019). NBA players are classified not by the five traditional positions but by a variety of clustering models. The full project can be found [here](https://jeremydumalig.com/clustering/).*
 
 Clustering.R
 * R script that cleans data, fits data to hierarchical clustering model, and visualizes model
