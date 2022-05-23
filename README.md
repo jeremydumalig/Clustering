@@ -2,7 +2,8 @@
 
 *This project was completed as a part of the Advanced Machine Learning elective at the Nueva School (2019). NBA players are classified not by the five traditional positions but by a variety of clustering models. The full project can be found [here](https://jeremydumalig.com/clustering/).*
 
-*Packages/Libraries Used : sklearn, pandas, ipywidgets, tidyverse, ggplot, cluster*
+*Packages/Libraries Used : sklearn, pandas, ipywidgets*
+*Packages/Libraries Used : tidyverse, ggplot, cluster*
 
 <br>
 
