@@ -7,10 +7,10 @@
 
 <br>
 
-Clustering.R
+**Clustering.R**
 * R script that cleans data, fits data to hierarchical clustering model, and visualizes model
 
-NBA_Positional_Clustering.ipynb
+**NBA_Positional_Clustering.ipynb**
 * Jupyter Notebook that cleans data, fits data to DBSCAN and K-Means clustering models, visualizes models, provides interactive list of players (only available on Google Colab)
 
 hierarchical.csv
